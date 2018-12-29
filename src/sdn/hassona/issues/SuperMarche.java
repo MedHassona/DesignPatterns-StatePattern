@@ -32,23 +32,23 @@ public class SuperMarche {
 	}
 	
 	
-	public String selectIssueFrom(int nbIssue) {
+	public String selectIssueFrom(int Rayon) {
 		Map<String, Issue> issuesOuverts = new HashMap<>();
 		int dist = nombreDeRayon;
 		String idProche = null;
 		for(String id : issuesSecours.keySet()) {
-			if(issuesSecours.get(id).getIssueStat().distanceDeRayon(nbIssue) <= nombreDeRayon)
+			if(issuesSecours.get(id).getIssueStat().distanceDeRayon(Rayon) <= nombreDeRayon)
 				issuesOuverts.put(id, issuesSecours.get(id));
 		}
 		
 		for(String id : issuesOuverts.keySet()) {
-			if(issuesOuverts.get(id).getIssueStat().distanceDeRayon(nbIssue) < dist) {
-				dist = issuesOuverts.get(id).getIssueStat().distanceDeRayon(nbIssue);
+			if(issuesOuverts.get(id).getIssueStat().distanceDeRayon(Rayon) < dist) {
+				dist = issuesOuverts.get(id).getIssueStat().distanceDeRayon(Rayon);
 				idProche = id;
 			}
-			if(issuesOuverts.get(id).getIssueStat().distanceDeRayon(nbIssue) == dist) {
+			if(issuesOuverts.get(id).getIssueStat().distanceDeRayon(Rayon) == dist) {
 				if(issuesOuverts.get(id).getNomberDePersonne() < issuesOuverts.get(idProche).getNomberDePersonne()){
-					dist = issuesOuverts.get(id).getIssueStat().distanceDeRayon(nbIssue);
+					dist = issuesOuverts.get(id).getIssueStat().distanceDeRayon(Rayon);
 					idProche = id;
 				}
 			}
