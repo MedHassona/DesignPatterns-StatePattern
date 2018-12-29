@@ -1,19 +1,19 @@
 # DesignPatterns-StatePattern
 
+The objective of the app
+****************************
+FranÃ§ais
+****************************
+un supermarchÃ© est composÃ© de : plusieurs rayons et plusieurs issues de secours.
+une issue de secours peut etre ouvert ou fermÃ©e.
+l'objectif est d'Ã©vacuer ce supermarchÃ©. pour Ã©vacuer une personne du supermarchÃ©, elle est supposÃ©e Ã©vacuer  Ã  partir d'un rayon donnÃ©.
+l'Ã©vacuation suit les rÃ¨gles suivantes :
+1. L'Ã©vacuation est faite par les issues ouvertes
+2. L'Ã©vacuation est faite par l'issue la plus proche du rayon.
+3. Si la distance vers les issues de secours est la mÃªme, l'Ã©vacuation est faite par l'issue qui contient moins de personnes Ã  Ã©vacuer.
 
 ****************************
-français
-****************************
-un supermarché est composé de : plusieurs rayons et plusieurs issues de secours.
-une issue de secours peut etre ouvert ou fermée.
-l'objectif est d'évacuer ce supermarché. pour évacuer une personne du supermarché, elle est supposée évacuer  à partir d'un rayon donné.
-l'évacuation suit les règles suivantes :
-1. L'évacuation est faite par les issues ouvertes
-2. L'évacuation est faite par l'issue la plus proche du rayon.
-3. Si la distance vers les issues de secours est la même, l'évacuation est faite par l'issue qui contient moins de personnes à évacuer.
-
-****************************
-english
+English
 ****************************
 a supermarket is composed of: several shelves and several emergency exits.
 an emergency exit can be opened or closed.
