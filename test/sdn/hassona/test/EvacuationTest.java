@@ -21,7 +21,7 @@ public class EvacuationTest {
 		   *           
 		   *           ||   ||   ||   ||   ||   ||   ||   ||   ||   ||  
 		   *           r1   r2   r3   r4   r5   r6   r7   r8   r9   r10
-		   *  Si l'évacuation est faite du rayon 5 l'issue la plus proche est issu1
+		   *  Si l'Ã©vacuation est faite du rayon 5 l'issue la plus proche est issu1
 		   * */
 		   String issueId = superMarche.selectIssueFrom(5);
 		   assertEquals("issu1", issueId);
@@ -33,7 +33,7 @@ public class EvacuationTest {
 		SuperMarche superMarche = new SuperMarche(nombreDeRayon, "issu1:3","issu2:10");
 		/*  fermer l'issue 1
 		 * 
-		   *				   issu1
+		   *		       issu1
 		   *                    ____                              issu2
 		   *                     ||                                 ||
 		   *           
@@ -49,8 +49,8 @@ public class EvacuationTest {
 	public void issuePlusProche3() {
 		int nombreDeRayon = 10;
 		SuperMarche superMarche = new SuperMarche(nombreDeRayon, "issu1:3","issu2:9");
-		// la distance vers l'issue 1 et 2 est la même, mais le nombre de pesonnes 
-		// à évacuer par l'issue 1 est plus élevé. L'évacuation choisit l'issue 2
+		// la distance vers l'issue 1 et 2 est la mÃªme, mais le nombre de pesonnes 
+		// Ã  Ã©vacuer par l'issue 1 est plus Ã©levÃ©. L'Ã©vacuation choisit l'issue 2
 		superMarche.getIssuesSecours().get("issu1").setNomberDePersonne(10);
 		superMarche.getIssuesSecours().get("issu2").setNomberDePersonne(4);
 		String issueId = superMarche.selectIssueFrom(6);
